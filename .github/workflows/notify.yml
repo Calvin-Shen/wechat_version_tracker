@@ -1,0 +1,23 @@
+name: Wechat Release Notify
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  notify_to_tg:
+    runs-on: ubuntu-latest
+    container: calvin881/ubuntu-msmtp-image:latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+      - name: Send release notification email
+        env:
+          GHTOKEN: ${{ secrets.GHTOKEN }}
+          NETEASE_EMAIL: ${{ secrets.NETEASE_EMAIL }}
+          NETEASE_PASSWORD: ${{ secrets.NETEASE_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: bash -x ./scripts/notify.sh
