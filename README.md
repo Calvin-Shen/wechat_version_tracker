@@ -12,9 +12,11 @@
 
 特此感谢 https://github.com/tom-snow/wechat-windows-versions 项目提供的灵感。
 
+---
 
+## 支持项目
 
-
+如果你觉得这个项目有用，请给它一个 **star**！
 
 # Project Introduction
 
@@ -30,3 +32,8 @@ This project was inspired by https://github.com/tom-snow/wechat-windows-versions
 
 Special thanks to the https://github.com/tom-snow/wechat-windows-versions project for the inspiration.
 
+---
+
+## Support the Project
+
+If you find this project useful, please give it a **star**!
